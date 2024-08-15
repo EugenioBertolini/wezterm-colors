@@ -89,11 +89,11 @@ local moon_palette = {
     text = '#e0def4',
     love = '#eb6f92',
     gold = '#f6c177',
-    -- rose = '#ea9a97',
+    rose = '#ea9a97',
     pine = '#3e8fb0',
     foam = '#9ccfd8',
     iris = '#c4a7e7',
-    -- highlight_high = '#56526e',
+    highlight_high = '#56526e',
 }
 
 local moon_active_tab = {
@@ -110,8 +110,8 @@ function moon.colors()
     return {
         foreground = moon_palette.text,
         background = moon_palette.base,
-        cursor_bg = '#59546d',
-        cursor_border = '#59546d',
+        cursor_bg = moon_palette.highlight_high,
+        cursor_border = moon_palette.highlight_high,
         cursor_fg = moon_palette.text,
         selection_bg = moon_palette.overlay,
         selection_fg = moon_palette.text,
@@ -123,18 +123,18 @@ function moon.colors()
             moon_palette.gold,
             moon_palette.foam,
             moon_palette.iris,
-            '#ebbcba', -- replacement for rose,
+            moon_palette.rose,
             moon_palette.text,
         },
 
         brights = {
-            '#817c9c', -- replacement for muted,
+            moon_palette.muted,
             moon_palette.love,
             moon_palette.pine,
             moon_palette.gold,
             moon_palette.foam,
             moon_palette.iris,
-            '#ebbcba', -- replacement for rose,
+            moon_palette.rose,
             moon_palette.text,
         },
 
